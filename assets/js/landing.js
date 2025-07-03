@@ -5,17 +5,33 @@ const projects_data = [
         id: 1,
         thumbnail : "assets/img/projects/project01.png",
         title : "Lading Page Empresarial",
-        tools : [ "React", "Nodejs"],
+        tools : [ "Php", "Javascript"],
         description : "Portal web de una sola página descripciones y formulario de contacto.",
         link : "https://intervionesiprd.com"
     },
     {
         id: 2,
+        thumbnail : "assets/img/projects/project04.png",
+        title : "Plugins de Wordpress con IA",
+        tools : [ "Php", "Javascript"],
+        description : "Plugin de Worpdress que permite usar una API de Inteligencia Artificial que chatea con los visitantes.",
+        link : "https://juventud.gob.do/"
+    },
+    {
+        id: 3,
+        thumbnail : "assets/img/projects/project03.png",
+        title : "Portal Gubernamental",
+        tools : [ "Php", "Javascript"],
+        description : "Creación de Thema en Wordpress para manejar portales del gobierno.",
+        link : "https://juventud.gob.do/"
+    },
+    {
+        id: 4,
         thumbnail : "assets/img/projects/project02.png",
-        title : "Lading page Profesional",
-        tools : [ "Javascript", "Css"],
-        description : "Portal web de una sola pagina, para tener presencia en Internet.",
-        link : "https://aesgdo.github.io/landing"
+        title : "Lading Page Profesional",
+        tools : [ "Php", "Javascript"],
+        description : "Website de una pagina para tener presencia en Internet.",
+        link : "https://aesgdo.github.io/landing/"
     },
 ]
 
