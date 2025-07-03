@@ -214,6 +214,12 @@
 
         <footer>
             <p>Made with <span style="color:red;"><i class="fas fa-heart"></i></span> by me. | Todos los derechos reservados © <span class="current_year">2025</span> </p>
+            <script>
+                const current_year = document.querySelector(".current_year");
+                const date = new Date();
+                const year = date.getFullYear();
+                current_year.innerHTML = year.toString(); 
+            </script>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js" integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
