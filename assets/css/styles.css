@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.no-show{
+    display: none !important;
+}
+
 body{
     background-color: #1e293b;
 }
@@ -13,6 +17,17 @@ body{
 .header_wrapper{
     background-color: #0f172acc;
     display: flex;
+}
+
+.header_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_container #mobil_menu_btn{
+    display: none;
 }
 
 .header_logo_container{
@@ -71,39 +86,46 @@ ul.menu li:hover::before{
     animation-fill-mode: forwards;   
 }
 
-@keyframes menu_hover {
+@media screen and (min-width:768px){
+    @keyframes menu_hover {
+    
+        0%{
+            transform: rotate(0deg) scaleX(0);
+            height: 3px;
+        }    
+        50% {
+            transform: rotate(360deg) scaleX(1);        
+            /* right: 0; */
+            /* width: 100%; */
+            top: 100%;
+            height: 3px;
+        }
+        90%{        
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1e293b;
+            border-bottom: 3px solid white;
+            border-top: 0px solid white;
+            transform: rotate(360deg) scaleX(1);        
+        }
+        100%{
+            top: 10%;
+            right: 0;
+            width: 100%;
+            height: 90%;
+            background-color: #1e293b;
+            border-top: 1px solid white;
+            border-bottom: 3px solid white;
+            transform: rotate(360deg) scaleX(1);        
+        }
+    }
 
-    0%{
-        transform: rotate(0deg) scaleX(0);
-        height: 3px;
-    }    
-    50% {
-        transform: rotate(360deg) scaleX(1);        
-        /* right: 0; */
-        /* width: 100%; */
-        top: 100%;
-        height: 3px;
+    #main_menu.collapse{
+        display: flex;
     }
-    90%{        
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #1e293b;
-        border-bottom: 3px solid white;
-        border-top: 0px solid white;
-        transform: rotate(360deg) scaleX(1);        
-    }
-    100%{
-        top: 10%;
-        right: 0;
-        width: 100%;
-        height: 90%;
-        background-color: #1e293b;
-        border-top: 1px solid white;
-        border-bottom: 3px solid white;
-        transform: rotate(360deg) scaleX(1);        
-    }
+    
 }
 
 ul.menu li a{
@@ -111,4 +133,32 @@ ul.menu li a{
     color: white;
     z-index: 1;
     position: relative;
+}
+
+
+@media screen and (max-width: 767px){
+
+    .header_container #mobil_menu_btn{
+        display: initial;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        background-color: #1e293b;
+    }
+    .header_wrapper {    
+        flex-direction: column;
+    }
+    
+    ul.menu{
+        flex-direction: column;
+    }
+
+    ul.menu li:hover{
+        background-color: #1e293b;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    ul.menu li a{
+
+    }
 }

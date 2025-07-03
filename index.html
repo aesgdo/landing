@@ -14,18 +14,44 @@
             
             <div class="header_wrapper">
 
-                <div class="header_logo_container">
-                    <img src="assets/img/aesg.png"/>
+                <div class="header_container">
+
+                    <div class="header_logo_container">
+                        <img src="assets/img/aesg.png"/>
+                    </div>
+    
+                    <button id="mobil_menu_btn" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#main_menu" aria-expanded="false" aria-controls="main_menu">
+                        <span class="menu_icon bars"><i class="fas fa-bars"></i></span>
+                        <span class="menu_icon times no-show"><i class="fas fa-times"></i></span>
+                    </button>
+
                 </div>
 
-                <nav id="main_menu" class="nav main_menu">
-                    <ul id="menu" class="menu unstyled-list">
+                <nav id="main_menu" class="nav main_menu collapse">
+
+
+                    <script>
+                        
+                        const mobil_menu_btn = document.getElementById("mobil_menu_btn");
+
+                        mobil_menu_btn.addEventListener("click", () => {                            
+                            const mobil_menu_icons = document.querySelectorAll(".menu_icon");    
+                            mobil_menu_icons.forEach( icon => {
+                                icon.classList.toggle("no-show");
+                            });
+                        })
+
+                    </script>
+
+                    <ul id="menu" class="menu  unstyled-list">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#habilidades">Habilidades</a></li>
                         <li><a href="#proyectos">Proyectos</a></li>
                         <li><a href="#experiencia">Experiencia</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
+
+
                 </nav>
 
             </div>

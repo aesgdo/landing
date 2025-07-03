@@ -1,2 +1,2 @@
 # landing
-Este repositio muestra mi trabajo y sobre mi.
+Este repositorio muestra mi trabajo y sobre mi.
