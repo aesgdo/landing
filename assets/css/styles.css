@@ -179,6 +179,80 @@ ul.menu li a{
         padding: 20px;
     }
 
+
+    /* SECTION START */
+
+    .section_start{
+        background-image: url(./../img/bg01.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .section_start::before{
+        content: " ";
+        position: absolute;
+        background-color: #121a2e;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        opacity: 0.8;
+        z-index: 0;
+    }
+
+    .section_start .start_wrapper{display: flex;padding: 20px;position: relative;}
+
+    .section_start .start_photo_container{
+        width: 100%;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section_start .start_pic_container{width: 100%;max-width: 300px;border-radius: 50%;overflow: hidden;border: 3px solid #0f86dd;}
+
+    .section_start .start_pic_container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .section_start .start_text_container{width: 100%;max-width: 50%;}
+
+    .section_start .start_text_container .text_wrap{
+
+    }
+    .section_start .start_text_container .text_wrap h1{font-size: 4em;}
+    .section_start .start_text_container .text_wrap p:nth-child(2){font-size: 1.5em;color: #4ade80;}
+    .section_start .start_text_container .text_wrap p:nth-child(3){font-size: 1.2em;}
+
+    @media screen and (max-width: 767px) {
+        .section_start .start_wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        .section_start .start_photo_container,
+        .section_start .start_text_container{
+            max-width: 100%;
+            padding: 20px;
+        }
+        .section_start .start_text_container .text_wrap{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .section_start .start_text_container .text_wrap h1{font-size: 2em;}
+        .section_start .start_text_container .text_wrap p{
+
+        }
+    }   
+    /* SECTION CONTACT */
+
     .section_contact{
 
     }
