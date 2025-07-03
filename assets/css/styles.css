@@ -204,6 +204,26 @@ ul.menu li a{
         padding: 10px;
     }
 
+    .section_contact .social_networks_wrapper{
+
+    }
+    .section_contact .social_networks_container{display: flex;padding: 20px 0;}
+    .section_contact .social_networks_wrapper a{
+        border-radius: 50%;
+        width: 39px;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #334155;
+        margin-right: 10px;
+        transition: 0.3s;
+    }
+    .section_contact .social_networks_wrapper a:hover{
+        background-color: #3b82f6;
+        transition: 0.3s;
+    }
+
 /* footer */
 
 footer{background-color: #121a2e;}
