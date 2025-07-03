@@ -41,9 +41,74 @@ ul.menu{
     width: 100%;
 }
 
-ul.menu li{padding: 5px 10px;}
+ul.menu li{
+    padding: 5px 10px;
+    border-bottom: 3px solid #ffffff00;
+    transition: 0.3s;
+    position: relative;
+}
+ul.menu li:hover{
+    /* background: blue; */
+    /* transition: 0.3s; */    
+}
+
+ul.menu li::before{
+    content:" ";
+    background-color: #ffffff;
+    position: absolute;
+    width: 5px;
+    top: 100%;
+    height: 3px;
+    right: calc(50% - 2.5px);
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+
+ul.menu li:hover::before{    
+    transition: 0.2s;
+    animation-name: menu_hover;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;   
+}
+
+@keyframes menu_hover {
+
+    0%{
+        transform: rotate(0deg) scaleX(0);
+        height: 3px;
+    }    
+    50% {
+        transform: rotate(360deg) scaleX(1);        
+        /* right: 0; */
+        /* width: 100%; */
+        top: 100%;
+        height: 3px;
+    }
+    90%{        
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1e293b;
+        border-bottom: 3px solid white;
+        border-top: 0px solid white;
+        transform: rotate(360deg) scaleX(1);        
+    }
+    100%{
+        top: 10%;
+        right: 0;
+        width: 100%;
+        height: 90%;
+        background-color: #1e293b;
+        border-top: 1px solid white;
+        border-bottom: 3px solid white;
+        transform: rotate(360deg) scaleX(1);        
+    }
+}
 
 ul.menu li a{
     text-decoration: none;
     color: white;
+    z-index: 1;
+    position: relative;
 }
