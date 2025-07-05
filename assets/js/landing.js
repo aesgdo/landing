@@ -1,5 +1,65 @@
 
 
+// HABILIDADES
+
+const skills_data = [
+    {
+        id: 1,
+        fa_icon : "<i class='fa-solid fa-swatchbook fa-fade'></i>",
+        title : "Frontend",
+        tools : [ "React", "jQuery", "Javascript", "Css", "Html"],
+    },
+    {
+        id: 2,        
+        fa_icon : "<i class='fa-solid fa-cube fa-fade'></i>",
+        title : "Backend",
+        tools : [ "Php", "NodeJs", "Phyton"],
+    },
+    {
+        id: 3,        
+        fa_icon : "<i class='fa-solid fa-code fa-fade'></i>",
+        title : "Base de Datos",
+        tools : [ "Mysql", "MongoDb", "Firebase"],
+    },
+    {
+        id: 4,
+        fa_icon : "<i class='fa-solid fa-microchip fa-fade'></i>",
+        title : "DevOps",
+        tools : [ "Docker", "AWS", "CI/CD"],
+    },
+]
+
+
+const skills = skills_data.map( (skill) => {
+
+    const tools = skill.tools.map( tool => {
+        return `<span class="tool ${tool.toLocaleLowerCase()}">${tool}</span>`
+    }).join("");
+
+    return `<div id="skill_card_id${skill.id}" class="skill_card">
+                <div class="skill_header">
+                    <div class="title_icon_container">
+                        <span>${skill.fa_icon}</span>
+                    </div>                                
+                    <h4>${skill.title}</h4>
+                </div>
+                <div class="card_body">
+                    <div class="card_tools">
+                        <div class="tools_container">
+                            ${tools}
+                        </div>                                
+                    </div>
+                </div>
+            </div>`
+
+}).join("");
+
+
+const skills_card_container = document.getElementById("skills_card_container");
+      skills_card_container.innerHTML = skills;
+
+// PROYECTOS
+
 const projects_data = [
     {
         id: 1,

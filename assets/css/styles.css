@@ -182,6 +182,7 @@ ul.menu li a{
 
     main section.section{
         padding: 20px;
+        margin-bottom: 20px;
     }
 
 
@@ -257,6 +258,97 @@ ul.menu li a{
         }
     } 
     
+    /* SECTION SKILLS */
+
+    .section_skills{
+
+    }
+
+    .section_skills .title_wrapper{}
+
+    .section_skills .title_wrapper h2{
+    text-align: center;
+}
+
+    .section_skills .skills_wrapper{padding: 20px;}
+    .section_skills .skills_card_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .section_skills .skill_card{
+    padding: 20px;
+    background-color: #1e293b;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+    width: 100%;
+    max-width: 252px;
+    min-height: 300px;
+    margin: 6px;
+    border: 1px solid #0dcaf0;
+}
+    .section_skills .skill_header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+    .section_skills .skill_header .title_icon_container{
+    font-size: 2em;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+    .section_skills .skill_header h4{}
+    .section_skills .skill_card .card_body{}
+    .section_skills .skill_card .card_body .card_tools{}
+    .section_skills .skill_card .tools_container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+    .section_skills .skill_card .tools_container .tool{
+    background-color: #0d6efd;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 16px;
+    display: block;
+    margin: 6px;
+    transition: 0.3s;
+}
+    .section_skills .skill_card .tools_container .tool:hover{
+    background-color: #343a40;
+    color: #4ade69;
+}
+    .section_skills .skill_card .tools_container .tool.react{}
+    .section_skills .skill_card .tools_container .tool.php{}
+    .section_skills .skill_card .tools_container .tool.vue{}
+    .section_skills .skill_card .tools_container .tool.tailwind{}
+    .section_skills .skill_card .tools_container .tool.typescript{}
+    .section_skills .skill_card .tools_container .tool.nodejs{}
+    .section_skills .skill_card .tools_container .tool.django{}
+    .section_skills .skill_card .tools_container .tool.express{}
+    .section_skills .skill_card .tools_container .tool.python{}
+    .section_skills .skill_card .tools_container .tool.mysql{}
+    .section_skills .skill_card .tools_container .tool.mongodb{}
+    .section_skills .skill_card .tools_container .tool.postgresql{}
+    .section_skills .skill_card .tools_container .tool.firebase{}
+    .section_skills .skill_card .tools_container .tool.docker{}
+    .section_skills .skill_card .tools_container .tool.aws{}
+    .section_skills .skill_card .tools_container .tool.cicd{}
+    .section_skills .skill_card .tools_container .tool.kubernetes{}
     /* SECTION PROJECTS */
 
     .section_projects{
