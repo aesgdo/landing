@@ -67,7 +67,8 @@ const projects_data = [
         title : "Lading Page Empresarial",
         tools : [ "Php", "Javascript"],
         description : "Portal web de una sola página descripciones y formulario de contacto.",
-        link : "https://intervionesiprd.com"
+        link : "https://intervionesiprd.com",
+        code_url: ""
     },
     {
         id: 2,
@@ -75,7 +76,8 @@ const projects_data = [
         title : "Plugins de Wordpress con IA",
         tools : [ "Php", "Javascript"],
         description : "Plugin de Worpdress que permite usar una API de Inteligencia Artificial que chatea con los visitantes.",
-        link : "https://juventud.gob.do/"
+        link : "https://juventud.gob.do/",
+        code_url: ""
     },
     {
         id: 3,
@@ -83,15 +85,26 @@ const projects_data = [
         title : "Portal Gubernamental",
         tools : [ "Php", "Javascript"],
         description : "Creación de Thema en Wordpress para manejar portales del gobierno.",
-        link : "https://juventud.gob.do/"
+        link : "https://juventud.gob.do/",
+        code_url: ""
     },
     {
         id: 4,
+        thumbnail : "assets/img/projects/project05.jpg",
+        title : "Automatización con IA",
+        tools : [ "Python", "Php" ],
+        description : "Website con publicaciones automaticas creadas con Inteligencia Artifical",
+        link : "",
+        code_url: "https://github.com/aesgdo/aibuzztoday"
+    },
+    {
+        id: 5,
         thumbnail : "assets/img/projects/project02.png",
         title : "Lading Page Profesional",
         tools : [ "Php", "Javascript"],
         description : "Website de una pagina para tener presencia en Internet.",
-        link : "https://aesgdo.github.io/landing/"
+        link : "https://aesgdo.github.io/landing/",
+        code_url: ""
     },
 ]
 
@@ -117,8 +130,17 @@ const cards = projects_data.map( (card) => {
                 <div class="card_description">
                     <p>${card.description}</p>
                 </div>
-                <div class="card_links">
-                    <a href="${card.link}" target="_blank" ref="no-referrer noopener"><span class="card_icon link"><i class="fa-solid fa-square-up-right"></i></span> Live</a>
+                
+                <div class="card_link_url_container">
+                    ${( card.link.length > 0 ) ? `
+                        <div class="card_links">
+                            <a href="${card.link}" target="_blank" ref="no-referrer noopener"><span class="card_icon link"><i class="fa-solid fa-square-up-right"></i></span> Live</a>
+                        </div>` : ``}
+                    
+                    ${( card.code_url.length > 0 ) ? `
+                        <div class="card_code_url">
+                            <a href="${card.code_url}" target="_blank" ref="no-referrer noopener"><span class="card_icon code_url"><i class="fa-solid fa-code"></i></span> Code</a>
+                        </div>` : ``}
                 </div>
             </div>
         </div>

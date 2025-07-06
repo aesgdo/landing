@@ -25,6 +25,12 @@ body{
 
 /* Header */
 
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+}
+
 .header_wrapper{
     background-color: #0f172acc;
     display: flex;
@@ -340,7 +346,9 @@ ul.menu li a{
     .section_skills .skill_card .tools_container .tool.nodejs{}
     .section_skills .skill_card .tools_container .tool.django{}
     .section_skills .skill_card .tools_container .tool.express{}
-    .section_skills .skill_card .tools_container .tool.python{}
+    .section_skills .skill_card .tools_container .tool.python{
+        background-color: #306998;
+    }
     .section_skills .skill_card .tools_container .tool.mysql{}
     .section_skills .skill_card .tools_container .tool.mongodb{}
     .section_skills .skill_card .tools_container .tool.postgresql{}
@@ -416,6 +424,9 @@ ul.menu li a{
     .section_projects .card_body .tools_container .tool.php{
         background-color: #787CB5;
     }
+    .section_projects .card_body .tools_container .tool.python{        
+        background-color: #306998;
+    }
     .section_projects .card_body .tools_container .tool.mysql{
 
     }
@@ -433,9 +444,9 @@ ul.menu li a{
     .section_projects .card_body .card_description p{
 
     }
-    .section_projects .card_body .card_links{
 
-    }
+    .section_projects .card_body .card_link_url_container{display: flex;}
+    .section_projects .card_body .card_links{margin-right: 10px;}
     .section_projects .card_body .card_links a{color: #0f86dd;}
     .section_projects .card_body .card_links a .card_icon{
 
@@ -444,6 +455,196 @@ ul.menu li a{
         
     }
 
+    .section_projects .card_body .card_code_url{margin-right: 10px;}
+    .section_projects .card_body .card_code_url a{color: #4ade80;}
+    .section_projects .card_body .card_code_url a .card_icon{
+
+    }
+    .section_projects .card_body .card_code_url a .card_icon.code{
+        
+    }
+
+    /* --------------------------------------- */
+    /* SECTION EXPERIENCE */
+
+    .section_experience{}
+    .section_experience .title_wrapper{
+    text-align: center;
+    margin-bottom: 20px;
+}
+    .section_experience .title_wrapper h2{}
+    .section_experience .experience_wrapper{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+    .section_experience .experience_container{}
+    .section_experience .experience_container .exp_group_wrap{
+    display: flex;
+    align-items: center;
+}
+    .section_experience .exp_group_wrap.left{
+    justify-content: start;
+    position: relative;
+}
+    .section_experience .exp_group_wrap.right{
+    justify-content: end;
+    position: relative;
+}
+    .section_experience .exp_group_wrap .exp_pic_container{
+    display: flex;
+}
+    .section_experience .exp_group_wrap .exp_pic_box{border-radius: 50%;overflow: hidden;width: 100%;max-width: 100px;}
+    .section_experience .exp_group_wrap .exp_pic_box img{
+}
+    .section_experience .exp_group_wrap .exp_pic_box span{}
+    .section_experience .exp_group_wrap .exp_text_container{
+    background-color: #212529;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    max-width: 246px;
+    margin: 10px;
+}
+    .section_experience .exp_group_wrap h5{
+        color:#35de80;
+        padding: 20px;
+    }
+    .section_experience .exp_group_wrap h4{}
+    .section_experience .exp_group_wrap p{}
+
+    /* Arrows Css */
+
+    .right-arrow {
+        position: absolute;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 0 25px;
+        width: 172px;
+        height: 55px;
+        border-top: 18px solid #3498db;
+        border-right: 18px solid #3498db;
+        right: 119px;
+        top: 35px;
+    }
+
+    .right-arrow::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: -9px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #3498db;
+        border-radius: 50%;
+    }
+
+    .right-arrow::after {
+        content: "";
+        position: absolute;
+        right: -26px;
+        bottom: -28px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-top: 20px solid #3498db;
+    }
+
+    .left-arrow {
+        position: absolute;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 25px 0;
+        width: 172px;
+        height: 55px;
+        border-top: 18px solid #3498db;
+        border-left: 18px solid #3498db;
+        right: 119px;
+        top: 35px;
+    }
+
+    .left-arrow::before {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: -9px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #3498db;
+        border-radius: 50%;
+    }
+
+    .left-arrow::after {
+        content: "";
+        position: absolute;
+        left: -27px;
+        bottom: -28px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-top: 20px solid #3498db;
+    }
+
+    .right-arrow.one{}
+    .left-arrow.two{
+        left: 115px;
+        width: 192px;
+        height: 89px;
+        top: 67px;
+    }
+        .right-arrow.three{
+        height: 77px;
+        top: 55px;
+    }
+        .left-arrow.four{
+        left: 118px;
+        top: 72px;
+        width: 192px;
+        height: 85px;
+    }
+        .right-arrow.five{
+        top: 56px;
+        height: 76px;
+    }
+
+    @media screen and (max-width: 629px){
+        .section_experience .exp_group_wrap.left,
+        .section_experience .exp_group_wrap.right{
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .arrow.left-arrow.two,
+        .arrow.right-arrow.two,
+        .arrow.left-arrow.three,
+        .arrow.right-arrow.three,
+        .arrow.left-arrow.four,
+        .arrow.right-arrow.four,
+        .arrow.left-arrow.five,
+        .arrow.right-arrow.five{
+            display: none;
+        }
+
+        .arrow.right-arrow.one{width: 0;border-radius: 0;position: absolute;right: calc(50% - 9px);top: 111px;height: 834px;}
+        .arrow.right-arrow.one::after{}
+        .arrow.right-arrow.one::before{
+            left: -6px;
+        }
+        .section_experience .exp_group_wrap .exp_text_container{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+    }
 
     /* --------------------------------------- */
     /* SECTION CONTACT */
