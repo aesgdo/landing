@@ -649,6 +649,13 @@ main section.section{
     transition: 0.3s;
 }
 
+@media screen and (max-width: 767px){
+    .section_contact .info_form_wrapper,
+    .section_contact .info_contact_wrapper{
+        padding: 20px 0;
+    }
+}
+
 /* footer */
 
 footer{background-color: #121a2e;}
