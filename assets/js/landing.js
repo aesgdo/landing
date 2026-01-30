@@ -67,7 +67,7 @@ const projects_data = [
         title : "Lading Page Empresarial",
         tools : [ "Php", "Javascript"],
         description : "Portal web de una sola página descripciones y formulario de contacto.",
-        link : "https://intervionesiprd.com",
+        link : "https://inversionesiprd.com",
         code_url: ""
     },
     {
